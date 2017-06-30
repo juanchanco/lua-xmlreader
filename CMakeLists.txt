@@ -51,14 +51,13 @@ elseif (WITH_LUAVER MATCHES "user")
 else ()
 	message(FATAL_ERROR "Unknown Lua version ${WITH_LUAVER}, must be 51, 52, 53, JIT, or user")
 endif ()
-message("LIBXML2_INCLUDE_DIRS: ${LIBXML2_INCLUDE_DIRS}")
+message("LIBXML2_INCLUDE_DIR: ${LIBXML2_INCLUDE_DIR}")
 message("LIBXML2_LIBRARIES: ${LIBXML2_LIBRARIES}")
 
 include_directories(
 	${CMAKE_SOURCE_DIR}
 	${LUA_INCLUDES}
-        ${LIBXML2_INCLUDE_DIRS}
-        /usr/include/libxml2
+        ${LIBXML2_INCLUDE_DIR}
 )
 
 if (WIN32)
